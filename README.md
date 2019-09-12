@@ -5,4 +5,4 @@
 
 A JavaScript library implementing Dave Green's `cubehelix' colour scheme.
 
-This is just scaffolding for the time being
+

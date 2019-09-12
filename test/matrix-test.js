@@ -7,7 +7,18 @@ assert.isOk(AssertionError);
 import           _ from 'lodash';
 assert.isOk(_);
 
-import {multiply, scalarMul, display}  from '../src/matrix-mul.js';
+import {add, multiply, scalarMul, display}  from '../src/matrix.js';
+
+describe('add tests', function() {
+    it('test 1', function() {
+        const a = [[1,2],[3,4]];
+        const b = [[5,6],[7,8]];
+        const result = display(add(a, b));
+        const expected = `6 8
+10 12`;
+        assert.strictEqual(result, expected);
+    });
+});
 
 describe('multiply tests', function() {
     it('test 1', function() {

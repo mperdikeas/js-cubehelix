@@ -11,8 +11,9 @@ import {cubehelix}  from '../src/cubehelix.js';
 
 describe('cubehelix silly test', function() {
     it('does not break', function() {
-        cubehelix();
-        assert.strictEqual(42, 42);
+        const l = cubehelix();
+        for (let x = 0; x < 1; x+=0.01)
+            l(x);
     });
 });
 
