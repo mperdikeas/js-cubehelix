@@ -1,6 +1,6 @@
 {
     "name": "cubehelix",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A library to translate intensity to a monotonically increasing RGB color",
     "main": "lib/index.js",
     "scripts": {
