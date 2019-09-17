@@ -1,6 +1,6 @@
 {
     "name": "cubehelix",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A library to translate intensity to a monotonically increasing RGB color",
     "main": "lib/index.js",
     "scripts": {
@@ -27,12 +27,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mperdikeas/js-cube-helix.git"
+        "url": "git+https://github.com/mperdikeas/js-cubehelix.git"
     },
     "bugs": {
-        "url": "https://github.com/mperdikeas/js-cube-helix/issues"
+        "url": "https://github.com/mperdikeas/js-cubehelix/issues"
     },
-    "homepage": "https://github.com/mperdikeas/js-cube-helix#readme",
+    "homepage": "https://github.com/mperdikeas/js-cubehelix#readme",
     "keywords": [
         "colormap",
         "cubehelix"
