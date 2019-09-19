@@ -13,7 +13,7 @@ function cubehelix(options = {start: 0.5, r:-1.5, hue:1.2, gamma:1.0}) {
     return function (l) {
 
         if ((l<0) || (l>1))
-            throw new Error(`l must be in [0, 1] (was: ${l})`);
+            throw new Error(`input must be in the [0, 1] range (was: ${l})`);
         const phi = 2*Math.PI*(start/3 + r*l);
         const alpha = hue*Math.pow(l, gamma)*(1 - Math.pow(l, gamma))/2;
         const rgb = add([[Math.pow(l, gamma)],[Math.pow(l, gamma)],[Math.pow(l, gamma)]]

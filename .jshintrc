@@ -1,0 +1,13 @@
+{
+    "esversion": 6,
+    "node": true,
+    "laxbreak": true,
+    "laxcomma": true,
+    "mocha": true,
+    "globals": {
+        /*  // MOCHA 
+         * "describe": false,
+         * "it": false
+         */
+        }
+}

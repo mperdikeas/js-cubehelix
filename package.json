@@ -1,7 +1,7 @@
 {
     "name": "cubehelix",
-    "version": "1.0.1",
-    "description": "A library to translate intensity to a monotonically increasing RGB color",
+    "version": "1.0.2",
+    "description": "An implementation of Dave Green's cubehelix algorithm to translate values in the [0, 1] range to monotonically increasing RGB colors",
     "main": "lib/index.js",
     "scripts": {
         "clean-logs": "rm -fr npm-debug.log.*",
@@ -18,12 +18,13 @@
             "https://github.com/remy/nodemon/issues/214"
         ],
         "start": "npm run build && node lib/index.js",
+        "linter": "npx jshint src/ test/",
         "test": "mocha --require @babel/register",
         "test-watch": "npm run build && mocha --require @babel/register --watch",
         "preglobalInstallOnThisMachine": "npm run clean && npm run test",
         "globalInstallOnThisMachine": "npm install -g .",
-        "prepublish": "(in-publish && npm run clean && npm run build && npm run test && /bin/true) || not-in-publish",
-        "prepublish.README": "to enable publishing, remove the /bin/false at the end (this serves as a publish guard)"
+        "prepublish": "(in-publish && npm run clean && npm run build && npm run test && npm run linter && /bin/true) || not-in-publish",
+        "prepublish.README": "to enable publishing, remove the /bin/false at the end (this serves as a publish guard), or replace with /bin/true"
     },
     "repository": {
         "type": "git",
@@ -42,11 +43,12 @@
     "devDependencies": {
         "@babel/cli": "~7.6.0",
         "@babel/core": "~7.6.0",
-        "@babel/register": "~7.6.0",
         "@babel/preset-env": "~7.6.0",
+        "@babel/register": "~7.6.0",
         "@babel/runtime": "~7.6.0",
-        "in-publish": "~2.0.0",
         "chai": "~4.2.0",
+        "in-publish": "~2.0.0",
+        "jshint": "^2.10.2",
         "mocha": "~6.2.0"
     },
     "dependencies": {}

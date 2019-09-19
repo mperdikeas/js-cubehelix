@@ -22,7 +22,7 @@ describe('cubehelix silly test', function() {
                                          * value with intensity 0.5 (0 the lowest, 1 being the highest)
                                          */
         // generate a mapping function with a helix configuration different than the default
-        mappingFunction = cubehelix({start: 0.75, r:-.5, hue:0.8, gamma:2.0});
+        mappingFunction = cubehelix({start: 0.75, r:-0.5, hue:0.8, gamma:2.0});
 
     });
 });

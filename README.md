@@ -3,13 +3,18 @@
 
 # cubehelix
 
-A JavaScript library implementing Dave Green's `cubehelix' colour scheme.
-See:
+A JavaScript library implementing Dave Green's `cubehelix' algorithm to
+generate a family of mapping functions. I.e., a family of functions that
+map values in the [0, 1] domain to points in the RGB colorspace
+employing a wide variety of color and ensuring that the perceived brightness
+monotonically increases.
+
+For a description of the algorithm see:
 
 - [http://astron-soc.in/bulletin/11June/289392011.pdf](http://astron-soc.in/bulletin/11June/289392011.pdf)
 - [http://www.mrao.cam.ac.uk/~dag/CUBEHELIX/](http://www.mrao.cam.ac.uk/~dag/CUBEHELIX/)
 
-Demo available [here](http://mperdikeas.github.io/cubehelix/index.html).
+A demo is available [here](http://mperdikeas.github.io/cubehelix/index.html).
 
 # how to use
 
@@ -19,7 +24,7 @@ Demo available [here](http://mperdikeas.github.io/cubehelix/index.html).
     var mappingFunction = cubehelix();
 
     /* get the RGB values (scaled in the [0, 1] range) for a
-     * value with intensity 0.5 (0 the lowest, 1 being the highest)
+     * value with intensity 0.5 (0 being the lowest, 1 the highest)
      */
     var rgb = mappingFunction(0.5);
     /*
