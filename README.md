@@ -18,22 +18,43 @@ A demo is available [here](http://mperdikeas.github.io/cubehelix/index.html).
 
 # how to use
 
-    import {cubehelix} from 'cubehelix';
+    import {cubehelix, defaultHelixConfig} from 'cubehelix';
 
-    // default start, rotations, hue and gamma are assumed
+    /*
+     * Generate a mapping function with the default
+     * helix configuration. I.e. default start, rotations,
+     * hue and gamma are assumed
+     */
     var mappingFunction = cubehelix();
 
-    /* get the RGB values (scaled in the [0, 1] range) for a
-     * value with intensity 0.5 (0 being the lowest, 1 the highest)
-     */
-    var rgb = mappingFunction(0.5);
     /*
-     * for certain non-default helix configuration values the mapping
+     * Get the RGB values (scaled in the [0, 1] range) for a
+     * value with intensity 0.5 (0 being the lowest, 1 the highest)
+     */        
+    var rgb = mappingFunction(0.5);
+
+    /*
+     * Generate a different mapping function by providing
+     * a full helix configuration different than the default
+     */
+    mappingFunction = cubehelix({start: 0.75, r:-0.5, hue:0.8, gamma:2.0});
+
+    /*
+     * Alternatively, you may choose to provide only some of the configuration
+     * parameters while keeping default values for the rest
+     */
+    mappingFunction = cubehelix({r:-0.5, gamma: 2.0});
+
+    /*
+     * NB: for many non-default helix configuration values the mapping
      * function may generate RGB components outside of the [0, 1] range
      * The client programmer is responsible for clipping to [0, 1].
+     * The more clipping occurs, the more the monotonicity of perceived luminosity 
+     * may suffer.
      */
 
-    // generate a mapping function with a helix configuration different than the default
-    mappingFunction = cubehelix({start: 0.75, r:-.5, hue:0.8, gamma:2.0});
-
+    /*
+     * Print the default helix configuration
+     */
+    console.log(JSON.stringify(defaultHelixConfig));
 

@@ -1,9 +1,13 @@
 'use strict';
 
 
-import {add, multiply, scalarMul, display}  from './matrix.js';
+import {add, multiply, scalarMul}  from './matrix.js';
 
-function cubehelix(options = {start: 0.5, r:-1.5, hue:1.2, gamma:1.0}) {
+const defaultHelixConfig = {start: 0.5, r:-1.5, hue:1.2, gamma:1.0};
+
+function cubehelix(overrides = {}) {
+
+    const options = Object.assign({}, defaultHelixConfig, overrides);
 
     const start = options.start;
     const r = options.r;
@@ -28,4 +32,5 @@ function cubehelix(options = {start: 0.5, r:-1.5, hue:1.2, gamma:1.0}) {
 }
 
 exports.cubehelix = cubehelix;
+exports.defaultHelixConfig = defaultHelixConfig;
 
