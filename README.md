@@ -14,7 +14,9 @@ For a description of the algorithm see:
 - [http://astron-soc.in/bulletin/11June/289392011.pdf](http://astron-soc.in/bulletin/11June/289392011.pdf)
 - [http://www.mrao.cam.ac.uk/~dag/CUBEHELIX/](http://www.mrao.cam.ac.uk/~dag/CUBEHELIX/)
 
-A demo is available [here](http://mperdikeas.github.io/cubehelix/index.html).
+A demo of the wide variety of colormap functions that this algorithm can generate
+is available [here](http://mperdikeas.github.io/cubehelix/index.html). The demo can also
+help users in choosing configuration parameters different than the default.
 
 # how to use
 

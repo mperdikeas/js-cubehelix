@@ -1,6 +1,6 @@
 {
     "name": "cubehelix",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "An implementation of Dave Green's cubehelix algorithm to translate values in the [0, 1] range to monotonically increasing RGB colors",
     "main": "lib/index.js",
     "scripts": {
